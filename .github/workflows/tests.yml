@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: DevExpress/testcafe-build-system/actions/prepare@main
+        with:
+          node-version: 16
       
       - uses: DevExpress/testcafe-build-system/actions/build@main
       
@@ -22,6 +24,8 @@ jobs:
     environment: CI
     steps:
       - uses: DevExpress/testcafe-build-system/actions/prepare@main
+        with:
+          node-version: 16
       
       - uses: DevExpress/testcafe-build-system/actions/test-npm@main
         with:
